@@ -102,7 +102,9 @@ app.post('/updateDetails', (req,res)=>{
         if(err){
             console.log(err)
         }
-        res.render('updateDetails', { selection : response })
+
+        var result = {empid: response[0].empid, empname: response[0].empname};
+        res.render('updateDetails', result)
     })
     
 })
