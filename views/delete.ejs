@@ -1,0 +1,13 @@
+z<%- include("./partials/header") %>
+<form action="/delete" method="POST">
+    <h1>Remove Employee</h1>
+    <label>Employee :  </label>
+    <select name="empid" >
+        <% for (const i in dropdownVals) { %>
+        <option value="<%= dropdownVals[i].empid %>"><%= dropdownVals[i].empid %> - <%= dropdownVals[i].empname %> </option>
+        <% } %>
+    </select>
+    <button >Delete</button><br><br>
+</form>
+    <%- include("./partials/links") %>
+    <%- include("./partials/footer") %>

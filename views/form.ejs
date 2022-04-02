@@ -1,0 +1,16 @@
+<!--Opening the ejs tags for including header file-->
+<%- include("./partials/header") %>
+<!-- Creating a form where action will 
+    be on "/" and the method will be "POST" -->
+<form action="/new" method="POST">
+    <!-- Creating the parameter Username as type= "text"-->
+    <label>Employee id </label>
+    <input type="number" placeholder="Employee Id" name="empid"><br><br>
+    <label>Employee name: </label>
+    <input type="text" placeholder="Employee Name" name="empname"><br><br>
+    <!-- Creating the submit button -->
+    <button>Submit</button>
+</form>
+
+<%- include("./partials/links") %>
+<%- include("./partials/footer") %>

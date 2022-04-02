@@ -1,0 +1,13 @@
+<%- include("./partials/header") %>
+  <h1>Employees</h1> 
+  <% if (data.length >0) { %>
+    <ul>
+        <% data.forEach(element => { %>
+          <li>
+              <p> <b> Employee Id : <%= element.empid %> </b></p>
+              <p><b> Employee Name : <%= element.empname %></b></p>
+       <% })%>
+    </ul>
+<%}%>
+<%- include("./partials/links") %>
+<%- include("./partials/footer") %>
