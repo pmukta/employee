@@ -98,11 +98,11 @@ app.get('/updateresult',(req,res)=>{
 app.post('/updateDetails', (req,res)=>{
     var empid=req.body.empid;
     var id = parseInt(empid);
-    Form.find(function(err, response){
+    Form.find({empid : id}, function(err, response){
         if(err){
             console.log(err)
         }
-        res.render('updateDetails', { empid : id })
+        res.render('updateDetails', { selection : response })
     })
     
 })
